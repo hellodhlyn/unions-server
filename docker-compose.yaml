@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres:10
+    container_name: unions-db
+    environment:
+      POSTGRES_DB: unions
+      POSTGRES_PASSWORD: rootpass
+    ports:
+    - 5432:5432
