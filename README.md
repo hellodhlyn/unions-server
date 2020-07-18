@@ -1,9 +1,15 @@
+[![Run tests and deploy](https://github.com/hellodhlyn/unions-server/workflows/Run%20tests/badge.svg)](https://github.com/hellodhlyn/unions-server/actions?query=workflow%3A%22Run+tests%22)
+[![codecov](https://codecov.io/gh/hellodhlyn/unions-server/branch/master/graph/badge.svg)](https://codecov.io/gh/hellodhlyn/unions-server)
+
 # Unions Server
-## Prerequisites
+
+Unions is an inter-blog service provide useful linkage among multiple blogs.
+
+## Development
+### Prerequisites
 * NodeJS 12.X or later
 * yarn
 
-## Development
 ### Setup
 ```sh
 # Install requirements

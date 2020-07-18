@@ -1,0 +1,30 @@
+name: Run tests
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:10
+        env:
+          POSTGRES_DB: unions_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: rootpass
+        ports:
+        - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install dependencies
+      run: yarn
+    - name: Run tests
+      run: yarn test:all
+    - name: Report coverage
+      run: |
+        yarn coverage
+        bash <(curl -s https://codecov.io/bash)

@@ -7,8 +7,8 @@
   "scripts": {
     "lint": "eslint -c .eslintrc.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "NODE_ENV=test mocha -r ts-node/register -r test/prepare.ts --fule-trace --reporter dot",
-    "test:all": "NODE_ENV=test mocha -r ts-node/register -r test/prepare.ts --fule-trace --reporter dot 'test/**/*.ts'",
-    "coverage": "NODE_ENV=test nyc mocha -r ts-node/register -r test/prepare.ts --fule-trace --reporter dot 'test/**/*.ts'",
+    "test:all": "NODE_ENV=test nyc mocha -r ts-node/register -r test/prepare.ts --fule-trace --reporter dot 'test/**/*.ts'",
+    "coverage": "nyc report --reporter=json",
     "debug": "nodemon --watch src --ext ts --exec 'yarn build && yarn start'",
     "prebuild": "rimraf ./dist",
     "build": "tsc",
