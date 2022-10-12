@@ -20,7 +20,7 @@
     "typeorm:show": "yarn typeorm migration:show"
   },
   "dependencies": {
-    "apollo-server": "^2.16.0",
+    "apollo-server": "^2.25.4",
     "class-validator": "^0.12.2",
     "graphql": "^15.3.0",
     "jsonwebtoken": "^8.5.1",
